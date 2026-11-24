@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this tool, please cite it as below."
+title: "BikeLab Di2/AXS Diagnostic"
+type: software
+authors:
+  - family-names: "Ravello Joo"
+    given-names: "Carlos Eduardo"
+    orcid: "https://orcid.org/0009-0007-5631-7436"
+license: CC-BY-NC-4.0
+repository-code: "https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic"
+url: "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20673193"
+    description: "All versions (concept DOI)"
+keywords:
+  - bicycle
+  - Shimano Di2
+  - SRAM AXS
+  - electronic shifting
+  - troubleshooting
+  - decision tree

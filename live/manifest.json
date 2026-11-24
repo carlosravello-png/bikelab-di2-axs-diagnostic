@@ -1,0 +1,22 @@
+{
+  "source": "https://www.bikelabstudio.com/articles/",
+  "copied_on": "2026-11-23",
+  "what": "the inline <script> of each page, byte for byte (the JSON-LD block is not part of the tool)",
+  "files": {
+    "live/di2_en.js": {
+      "page": "di2-axs-diagnostic.html",
+      "bytes": 42726,
+      "sha256": "44369a52fc88771b4210e45ad96211017bfb89fd461f6bcf3a475be245145287"
+    },
+    "live/di2_es.js": {
+      "page": "di2-axs-diagnostic-es.html",
+      "bytes": 42653,
+      "sha256": "af08c0d428851cbf5a4f2dd13825ac21c7fda04ddc68e042d343bfb9471e288d"
+    },
+    "live/di2_pt.js": {
+      "page": "di2-axs-diagnostic-pt.html",
+      "bytes": 42588,
+      "sha256": "e309c1703ab6e9741d4e6f2f18757c1af87d3dbb8d69a1a63d36eba4a98b6be2"
+    }
+  }
+}
