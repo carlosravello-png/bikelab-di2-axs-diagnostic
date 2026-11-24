@@ -77,9 +77,18 @@ check(shapes.every(x => x === shapes[0]), 'live: the three pages have the same t
 // 2) source: one tree, three languages; UI strings complete in the three languages
 const tree = JSON.parse(read('src/tree.json'));
 checkTree(tree, 'src/tree.json', ['en', 'es', 'pt']);
+// every diagnosis names its source (manufacturer document) and its basis; the page shows both
+for (const [id, n] of Object.entries(tree)) {
+  if (n.opts) continue;
+  check(Array.isArray(n.sources) && n.sources.length > 0, `src/tree.json: ${id} cites at least one source`);
+  for (const s of n.sources || []) check(typeof s.label === 'string' && s.label && /^https:\/\//.test(s.url || ''), `src/tree.json: ${id} source has label and https URL`);
+  check(['official', 'community'].includes(n.basis), `src/tree.json: ${id} basis is official or community`);
+  check([null, 'shimano', 'sram'].includes(n.brand), `src/tree.json: ${id} brand is shimano, sram or none`);
+}
 const ui = JSON.parse(read('src/ui.json'));
 for (const l of ['es', 'pt']) {
   for (const k of Object.keys(ui.en)) check(k in ui[l], `src/ui.json: ${l} has key ${k}`);
+  for (const k of Object.keys(ui[l])) check(k in ui.en, `src/ui.json: ${l} key ${k} exists in en`);
   for (const k of Object.keys(ui.en.static)) check(typeof ui[l].static[k] === 'string' && ui[l].static[k] !== '', `src/ui.json: ${l} static ${k}`);
 }
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BikeLab Di2/AXS Diagnostic — demo of the engine</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html">
+<style>
+  :root { --bg:#050505; --card:#0e0e0e; --border:#262626; --border2:#333; --text:#d8d8d8; --dim:#8a8a8a; --yellow:#e8ff00; --green:#3ddc84; --orange:#ffa94d; --red:#ff6b6b; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
+  .mono { font-family: ui-monospace, "IBM Plex Mono", Menlo, monospace; }
+  .top { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:.75rem; color:var(--dim); }
+  .top a { color:var(--yellow); text-decoration:none; margin-left:10px; }
+  h1 { font-size:1.6rem; line-height:1.15; margin:14px 0 6px; color:#fff; } h1 span { color:var(--yellow); }
+  .badges span { display:inline-block; border:1px solid var(--border2); color:var(--dim); font-size:.7rem; padding:2px 8px; margin:0 6px 6px 0; }
+  .prog { margin:18px 0 10px; } .prog-bar { height:3px; background:var(--border); } #prog-fill { height:3px; background:var(--yellow); width:5%; transition:width .2s; }
+  #prog-label { font-size:.65rem; letter-spacing:.15em; color:var(--dim); }
+  .card, .result-card { background:var(--card); border:1px solid var(--border); padding:18px; margin-top:10px; }
+  .card-step { font-family:ui-monospace,monospace; font-size:.7rem; letter-spacing:.12em; color:var(--dim); margin:0 0 6px; }
+  .card-question, .result-title { font-size:1.15rem; color:#fff; margin:0 0 8px; }
+  .card-desc { color:var(--text); margin:0 0 12px; }
+  .options { display:grid; gap:8px; }
+  .opt { display:flex; gap:12px; align-items:flex-start; text-align:left; width:100%; background:#111; color:var(--text); border:1px solid var(--border2); padding:12px; cursor:pointer; font:inherit; }
+  .opt:hover { border-color:var(--yellow); }
+  .opt-key { font-family:ui-monospace,monospace; color:var(--yellow); min-width:1.2em; }
+  .opt-sub { font-size:.8rem; color:var(--dim); }
+  .back-btn, .btn-restart { background:none; border:1px solid var(--border2); color:var(--dim); padding:6px 12px; cursor:pointer; font:inherit; font-size:.75rem; }
+  .result-icon { font-family:ui-monospace,monospace; font-size:.75rem; letter-spacing:.1em; margin-bottom:8px; }
+  .result-icon.green { color:var(--green); } .result-icon.orange { color:var(--orange); } .result-icon.red { color:var(--red); }
+  .result-steps { list-style:none; padding:0; margin:0 0 12px; } .result-steps li { display:flex; gap:10px; padding:6px 0; border-top:1px solid var(--border); }
+  .step-num { font-family:ui-monospace,monospace; color:var(--yellow); }
+  .result-note { font-size:.82rem; color:var(--dim); border-left:2px solid var(--border2); padding:6px 10px; margin:10px 0; overflow-wrap:anywhere; }
+  .peru-note, .social-follow { font-size:.8rem; color:var(--dim); margin:10px 0; }
+  .social-follow-btns, .actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+  .btn-social, .btn-service, .btn-wa { border:1px solid var(--border2); color:var(--text); text-decoration:none; padding:6px 12px; font-size:.75rem; display:inline-flex; gap:6px; align-items:center; }
+  .btn-wa { border-color:var(--yellow); color:var(--yellow); }
+  .hidden { display:none; }
+  footer { margin-top:32px; font-size:.75rem; color:var(--dim); }
+  footer a { color:var(--yellow); }
+</style>
+</head>
+<body>
+<main>
+  <div class="top mono">
+    <span id="h-label">// Diagnostic Tool v3.0</span>
+    <span>Language: <a href="?lang=en">EN</a><a href="?lang=es">ES</a><a href="?lang=pt">PT</a></span>
+  </div>
+  <h1 id="h-title">ELECTRONIC<br>SHIFTING<br><span>DIAGNOSTIC_</span></h1>
+  <p id="h-sub"></p>
+  <div class="badges"><span id="h-badge1"></span><span>11s &amp; 12s</span><span id="h-badge3"></span></div>
+  <div class="prog"><div id="prog-label" class="mono"></div><div class="prog-bar"><div id="prog-fill"></div></div></div>
+  <div id="tool-container"></div>
+  <div id="faq-en" class="hidden"></div><div id="faq-es" class="hidden"></div>
+  <div class="hidden"><span id="sag-card-title"></span><span id="sag-card-desc"></span><span id="sag-link"></span><span id="f-home"></span></div>
+  <footer>
+    <p id="f-note"></p>
+    <p>Demo of the engine in this repository (<code>dist/di2_tool.js</code>). The tool with its full page lives at
+      <a href="https://www.bikelabstudio.com/articles/di2-axs-diagnostic-es.html">bikelabstudio.com</a>.
+      Code: <a href="https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic">GitHub</a> · CC BY-NC 4.0 · Carlos Eduardo Ravello Joo, ORCID 0009-0007-5631-7436.</p>
+  </footer>
+</main>
+<script src="dist/di2_tool.js"></script>
+</body>
+</html>

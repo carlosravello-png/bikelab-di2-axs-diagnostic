@@ -162,31 +162,39 @@ function renderResult(node, container) {
     card.appendChild(ul);
   }
 
-  if (node.prevention) {
-    const prev = document.createElement('div');
-    prev.className = 'result-note';
-    prev.innerHTML = '<strong>' + t('prevention_label') + '</strong>' + tx(node.prevention);
-    card.appendChild(prev);
-  }
-
-  if (node.warranty) {
-    const w = document.createElement('div');
-    w.className = 'result-note';
-    w.innerHTML = '<strong>' + t('warranty_label') + '</strong>' + t('warranty_text');
-    card.appendChild(w);
-  }
-
-  if (node.community) {
+  if (node.basis === 'community') {
     const cn = document.createElement('div');
     cn.className = 'result-note community';
     cn.textContent = t('community_note');
     card.appendChild(cn);
   }
 
+  // Sources: every diagnosis says which manufacturer document it comes from
+  if (node.sources && node.sources.length) {
+    const src = document.createElement('div');
+    src.className = 'result-note result-sources';
+    const lbl = document.createElement('strong');
+    lbl.textContent = t('sources') + ' ';
+    src.appendChild(lbl);
+    node.sources.forEach((s, i) => {
+      const a = document.createElement('a');
+      a.href = s.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = s.label;
+      a.style.color = 'var(--yellow)';
+      a.style.textDecoration = 'none';
+      a.style.overflowWrap = 'anywhere';
+      src.appendChild(a);
+      if (i < node.sources.length - 1) src.appendChild(document.createTextNode(' · '));
+    });
+    card.appendChild(src);
+  }
+
   // Peru note
   const peru = document.createElement('div');
   peru.className = 'peru-note';
-  peru.innerHTML = t('peru') + '<a href="https://wa.me/51934391545?text=' + encodeURIComponent(t('wa_peru')) + '" style="color:var(--yellow);text-decoration:none"><strong>' + t('peru2') + '</strong></a>';
+  peru.innerHTML = t('peru') + '<a href="https://wa.me/51934391545?text=' + encodeURIComponent(t('wa_peru') + tx(node.title)) + '" style="color:var(--yellow);text-decoration:none"><strong>' + t('peru2') + '</strong></a>';
   card.appendChild(peru);
 
   // Social follow
@@ -225,27 +233,30 @@ function renderResult(node, container) {
   restartBtn.onclick = () => { history = []; render('q0'); };
   actions.appendChild(restartBtn);
 
-  if (node.type === 'workshop') {
-    const shimano = document.createElement('a');
-    shimano.className = 'btn-service';
-    shimano.href = 'https://si.shimano.com';
-    shimano.target = '_blank';
-    shimano.rel = 'noopener';
-    shimano.textContent = t('shimano_service') + ' →';
-    actions.appendChild(shimano);
-
-    const sram = document.createElement('a');
-    sram.className = 'btn-service';
-    sram.href = 'https://www.sram.com/en/service';
-    sram.target = '_blank';
-    sram.rel = 'noopener';
-    sram.textContent = t('sram_service') + ' →';
-    actions.appendChild(sram);
+  if (node.type === 'workshop' || node.type === 'limit') {
+    if (node.brand !== 'sram') {
+      const shimano = document.createElement('a');
+      shimano.className = 'btn-service';
+      shimano.href = 'https://si.shimano.com';
+      shimano.target = '_blank';
+      shimano.rel = 'noopener';
+      shimano.textContent = t('shimano_service') + ' →';
+      actions.appendChild(shimano);
+    }
+    if (node.brand !== 'shimano') {
+      const sram = document.createElement('a');
+      sram.className = 'btn-service';
+      sram.href = 'https://www.sram.com/en/service';
+      sram.target = '_blank';
+      sram.rel = 'noopener';
+      sram.textContent = t('sram_service') + ' →';
+      actions.appendChild(sram);
+    }
   }
 
   const wa = document.createElement('a');
   wa.className = 'btn-wa';
-  wa.href = 'https://wa.me/51934391545?text=' + encodeURIComponent(t('wa_button'));
+  wa.href = 'https://wa.me/51934391545?text=' + encodeURIComponent(t('wa_button') + tx(node.title));
   wa.target = '_blank';
   wa.rel = 'noopener';
   wa.textContent = t('wa') + ' →';

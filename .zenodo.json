@@ -1,0 +1,40 @@
+{
+  "title": "BikeLab Di2/AXS Diagnostic",
+  "version": "3.0.0",
+  "upload_type": "software",
+  "description": "<p>Browser-only decision tree for troubleshooting electronic bicycle shifting: Shimano Di2 12-speed road (RD-R9250/R8150/R7150), Shimano Di2 11-speed with junction A, and SRAM eTap AXS road and XPLR. 7 questions, 30 answers, 22 diagnoses in English, Spanish and Portuguese.</p><p>Version 3.0.0 is the audited version. Every diagnosis cites the Shimano or SRAM document it comes from, with the page; the record of claims, sources and the errors found in the previous version is in docs/verification.md. Di2 12-speed and 11-speed are separate branches because their buttons and procedures differ. Steps without a manufacturer source were removed.</p><p>Not affiliated with Shimano or SRAM. Di2 and AXS are trademarks of their owners. A diagnostic aid, not a replacement for the dealer's manual or warranty service.</p>",
+  "creators": [
+    {
+      "name": "Ravello Joo, Carlos Eduardo",
+      "orcid": "0009-0007-5631-7436",
+      "affiliation": "BikeLab Studio"
+    }
+  ],
+  "license": "cc-by-nc-4.0",
+  "keywords": [
+    "bicycle",
+    "Shimano Di2",
+    "SRAM AXS",
+    "electronic shifting",
+    "troubleshooting",
+    "decision tree"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.20673193",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "language": "eng"
+}
