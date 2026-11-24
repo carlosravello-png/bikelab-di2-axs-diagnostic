@@ -3,6 +3,8 @@ message: "If you use this tool, please cite it as below."
 title: "BikeLab Di2/AXS Diagnostic"
 type: software
 version: "3.0.0"
+doi: "10.5281/zenodo.24488781"
+date-released: "2026-11-24"
 authors:
   - family-names: "Ravello Joo"
     given-names: "Carlos Eduardo"
@@ -12,8 +14,17 @@ repository-code: "https://github.com/carlosravello-png/bikelab-di2-axs-diagnosti
 url: "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html"
 identifiers:
   - type: doi
+    value: "10.5281/zenodo.24488780"
+    description: "All versions from 3.0.0 (concept DOI)"
+  - type: doi
+    value: "10.5281/zenodo.24488781"
+    description: "Version 3.0.0"
+  - type: swh
+    value: "swh:1:rev:a03d26a135f44207eef042a6d89de44ca1e01fb8"
+    description: "Software Heritage archive of the v3.0.0 code"
+  - type: doi
     value: "10.5281/zenodo.20673193"
-    description: "All versions (concept DOI)"
+    description: "Deposits of 13 June 2026 (CC BY-NC-ND 4.0)"
 keywords:
   - bicycle
   - Shimano Di2
