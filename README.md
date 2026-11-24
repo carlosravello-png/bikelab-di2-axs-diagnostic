@@ -19,9 +19,10 @@ An audit is in progress. Every procedure (battery models, reset sequences, butto
 
 ```
 node tools/check_tree.mjs     # Node.js 18+, no dependencies
+node tools/build.mjs          # rebuilds dist/di2_tool.js from src/
 ```
 
-It reads the tree out of the three scripts in `live/` and checks that the files match the manifest, that every answer leads to an existing node, that every node is reachable, that there are no loops, that every diagnosis has a known type and a description, that every text exists in both language slots, and that the three languages have the same tree. It prints `N/N checks passed` and exits with code 0.
+It reads the tree out of the three scripts in `live/` and out of `src/tree.json`, and checks that the files match the manifest, that every answer leads to an existing node, that every node is reachable, that there are no loops, that every diagnosis has a known type and a description, that every text exists in both language slots, and that the three languages have the same tree. It prints `N/N checks passed` and exits with code 0.
 
 It does **not** check whether a procedure is correct. That is checked against the manufacturers' documentation, not by code.
 
@@ -29,7 +30,13 @@ It does **not** check whether a procedure is correct. That is checked against th
 |---|---|
 | `live/di2_en.js`, `live/di2_es.js`, `live/di2_pt.js` | The tool as served on 2026-11-23, copied byte for byte. |
 | `live/manifest.json` | Source page, size and SHA-256 of each copy. |
-| `tools/check_tree.mjs` | Structural verifier. Runs on every push (GitHub Actions). |
+| `src/tree.json` | The decision tree, one file, with English, Spanish and Portuguese text. |
+| `src/ui.json` | Interface strings in the three languages. |
+| `src/app.js` | The engine that renders the tree. |
+| `tools/build.mjs` | Builds `dist/di2_tool.js`, the script the three pages carry inline. |
+| `dist/di2_tool.js` | Built script. |
+| `tools/unify_from_live.mjs`, `tools/check_unify.mjs` | How `src/` was made from `live/`, and the proof that nothing changed: the built script renders the same 72 screens (23 nodes and the header, in three languages) as the live scripts. |
+| `tools/check_tree.mjs` | Structural verifier for `live/` and `src/`. Runs on every push (GitHub Actions). |
 
 ## Honest notes
 

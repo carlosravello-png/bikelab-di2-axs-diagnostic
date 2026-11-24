@@ -1,0 +1,12 @@
+{
+  "name": "bikelab-di2-axs-diagnostic",
+  "version": "3.0.0-dev",
+  "private": true,
+  "description": "Di2/AXS electronic shifting diagnostic: decision tree for Shimano Di2 and SRAM AXS.",
+  "license": "CC-BY-NC-4.0",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node tools/check_tree.mjs"
+  }
+}

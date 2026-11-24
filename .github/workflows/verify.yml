@@ -12,3 +12,5 @@ jobs:
         with:
           node-version: '20'
       - run: node tools/check_tree.mjs
+      - run: node tools/build.mjs
+      - run: git diff --exit-code dist/di2_tool.js
