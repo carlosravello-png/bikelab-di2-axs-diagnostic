@@ -2,14 +2,14 @@ cff-version: 1.2.0
 message: "If you use this tool, please cite it as below."
 title: "BikeLab Di2/AXS Diagnostic"
 type: software
-version: "3.0.0"
-doi: "10.5281/zenodo.24488781"
-date-released: "2026-11-24"
+version: "3.1.0"
+doi: "10.5281/zenodo.24488780"
+date-released: "2026-11-25"
 authors:
   - family-names: "Ravello Joo"
     given-names: "Carlos Eduardo"
     orcid: "https://orcid.org/0009-0007-5631-7436"
-license: CC-BY-NC-4.0
+license: PolyForm-Noncommercial-1.0.0
 repository-code: "https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic"
 url: "https://www.bikelabstudio.com/articles/di2-axs-diagnostic.html"
 identifiers:

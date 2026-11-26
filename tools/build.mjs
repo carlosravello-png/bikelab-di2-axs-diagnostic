@@ -7,7 +7,7 @@ const read = p => readFileSync(new URL(p, root), 'utf8');
 const tree = JSON.parse(read('src/tree.json'));
 const ui = JSON.parse(read('src/ui.json'));
 const pkg = JSON.parse(read('package.json'));
-const out = '\n// BikeLab Di2/AXS Diagnostic ' + pkg.version + ' · https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic · CC BY-NC 4.0\n'
+const out = '\n// BikeLab Di2/AXS Diagnostic ' + pkg.version + ' · https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic · PolyForm Noncommercial 1.0.0\n'
   + 'const TREE = ' + JSON.stringify(tree) + ';\n'
   + 'const UI = ' + JSON.stringify(ui) + ';\n'
   + read('src/app.js');

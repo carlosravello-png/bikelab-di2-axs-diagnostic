@@ -3,7 +3,7 @@
 Designed and maintained by **Carlos Eduardo Ravello Joo** · ORCID [0009-0007-5631-7436](https://orcid.org/0009-0007-5631-7436) · BikeLab Studio, Trujillo, Peru
 
 [![verify](https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic/actions/workflows/verify.yml/badge.svg)](https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic/actions/workflows/verify.yml)
-[![license](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-c8922a)](LICENSE.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24488780.svg)](https://doi.org/10.5281/zenodo.24488780)
 [![Software Heritage](https://archive.softwareheritage.org/badge/origin/https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic/)](https://archive.softwareheritage.org/swh:1:rev:a03d26a135f44207eef042a6d89de44ca1e01fb8)
 [![demo](https://img.shields.io/badge/demo-GitHub%20Pages-4fb8c8)](https://carlosravello-png.github.io/bikelab-di2-axs-diagnostic/)
@@ -57,14 +57,16 @@ They do **not** check whether a procedure is correct. That was checked against t
 - In `live/di2_pt.js` the Portuguese text sits in the `es` slot of the tree; the live page read that slot. In `src/` each language has its own slot.
 - `tools/check_unify.mjs` only proves the unification commit; it cannot pass on 3.0.0, whose texts changed on purpose.
 - Only the generations in `docs/verification.md` were checked. Shimano MTB Di2 12-speed, GRX Di2 12-speed and SRAM Eagle AXS/Transmission are not covered.
-- The deposits made on Zenodo on 13 June 2026 (one of them labelled 2.0) carry CC BY-NC-ND 4.0, and that license stays with them. This repository is CC BY-NC 4.0: derivatives are allowed for non-commercial use, with attribution.
+- The deposits made on Zenodo on 13 June 2026 (one of them labelled 2.0) carry CC BY-NC-ND 4.0, and that license stays with them. From version 3.1.0 this repository is PolyForm Noncommercial 1.0.0; versions up to 3.0.0 were released under CC BY-NC 4.0 and keep that licence.
 - Not checked: whether the June 2026 Zenodo archive is byte-identical to `live/`.
 - The text of the bikelabstudio.com pages stays under the site's own license.
 - Not affiliated with Shimano or SRAM. Di2 and AXS are trademarks of their owners. This is a diagnostic aid, not a replacement for the manufacturer's dealer manual or warranty service.
 
 ## License and citation
 
-[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). Metadata in `CITATION.cff`.
+[PolyForm Noncommercial 1.0.0](LICENSE.md): free for any noncommercial use, including research, teaching
+and personal use; commercial use needs written permission from the author. Versions up to 3.0.0:
+CC BY-NC 4.0. Licence and attribution terms: https://carlosravello.com/licencia-en.html. Metadata in `CITATION.cff`.
 
 Cite the version you used. Version 3.0.0:
 
