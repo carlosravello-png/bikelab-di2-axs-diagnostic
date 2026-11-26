@@ -5,7 +5,7 @@ Designed and maintained by **Carlos Eduardo Ravello Joo** · ORCID [0009-0007-56
 [![verify](https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic/actions/workflows/verify.yml/badge.svg)](https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic/actions/workflows/verify.yml)
 [![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-c8922a)](LICENSE.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24488780.svg)](https://doi.org/10.5281/zenodo.24488780)
-[![Software Heritage](https://archive.softwareheritage.org/badge/origin/https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic/)](https://archive.softwareheritage.org/swh:1:rev:a03d26a135f44207eef042a6d89de44ca1e01fb8)
+[![Software Heritage](https://archive.softwareheritage.org/badge/origin/https://github.com/carlosravello-png/bikelab-di2-axs-diagnostic/)](https://archive.softwareheritage.org/swh:1:rev:24da3d67acd66bc2bcf4e714f289dd0ec7ef810e)
 [![demo](https://img.shields.io/badge/demo-GitHub%20Pages-4fb8c8)](https://carlosravello-png.github.io/bikelab-di2-axs-diagnostic/)
 
 A decision tree for troubleshooting electronic shifting on Shimano Di2 12-speed road, Shimano Di2 11-speed with junction A, and SRAM eTap AXS road and XPLR: 7 questions, 30 answers and 22 diagnoses. Each diagnosis says whether it can be solved at home, links the Shimano or SRAM document it comes from, and sends other systems to their own manuals. It runs in the browser.
@@ -68,10 +68,10 @@ They do **not** check whether a procedure is correct. That was checked against t
 and personal use; commercial use needs written permission from the author. Versions up to 3.0.0:
 CC BY-NC 4.0. Licence and attribution terms: https://carlosravello.com/licencia-en.html. Metadata in `CITATION.cff`.
 
-Cite the version you used. Version 3.0.0:
+Cite the version you used. Version 3.1.0:
 
-Ravello Joo, C. E. (2026). *BikeLab Di2/AXS Diagnostic* (Version 3.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.24488781
+Ravello Joo, C. E. (2026). *BikeLab Di2/AXS Diagnostic* (Version 3.1.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.24549832
 
-All versions from 3.0.0: DOI [10.5281/zenodo.24488780](https://doi.org/10.5281/zenodo.24488780). Code archived in Software Heritage: [swh:1:rev:a03d26a135f44207eef042a6d89de44ca1e01fb8](https://archive.softwareheritage.org/swh:1:rev:a03d26a135f44207eef042a6d89de44ca1e01fb8).
+All versions from 3.0.0: DOI [10.5281/zenodo.24488780](https://doi.org/10.5281/zenodo.24488780). Code archived in Software Heritage: [swh:1:rev:24da3d67acd66bc2bcf4e714f289dd0ec7ef810e](https://archive.softwareheritage.org/swh:1:rev:24da3d67acd66bc2bcf4e714f289dd0ec7ef810e).
 
 Earlier deposits (13 June 2026, CC BY-NC-ND 4.0): Ravello Joo, C. E. (2026). *BikeLab Di2/AXS Diagnostic: Decision-Tree Tool for Electronic Shifting Troubleshooting* (Version 2.0). Zenodo. https://doi.org/10.5281/zenodo.20676928 · all June 2026 versions: DOI [10.5281/zenodo.20673193](https://doi.org/10.5281/zenodo.20673193).

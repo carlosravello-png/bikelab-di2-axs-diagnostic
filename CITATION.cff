@@ -3,8 +3,8 @@ message: "If you use this tool, please cite it as below."
 title: "BikeLab Di2/AXS Diagnostic"
 type: software
 version: "3.1.0"
-doi: "10.5281/zenodo.24488780"
-date-released: "2026-11-25"
+doi: "10.5281/zenodo.24549832"
+date-released: "2026-11-26"
 authors:
   - family-names: "Ravello Joo"
     given-names: "Carlos Eduardo"
@@ -16,6 +16,12 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.24488780"
     description: "All versions from 3.0.0 (concept DOI)"
+  - type: doi
+    value: "10.5281/zenodo.24549832"
+    description: "Version 3.1.0"
+  - type: swh
+    value: "swh:1:rev:24da3d67acd66bc2bcf4e714f289dd0ec7ef810e"
+    description: "Software Heritage archive of the v3.1.0 code"
   - type: doi
     value: "10.5281/zenodo.24488781"
     description: "Version 3.0.0"
